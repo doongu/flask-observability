@@ -112,7 +112,7 @@ services:
     logging: *logging
 
   tempo:
-    image: grafana/tempo:1.5
+    image: grafana/tempo:1.5.0
     command: [ "--target=all", "--storage.trace.backend=local", "--storage.trace.local.path=/var/tempo", "--auth.enabled=false" ]
     ports:
       - "14317:4317"  # Tempo gRPC receiver
